@@ -34,3 +34,4 @@ jobs:
           deployment_package: 'practic/target/practic-0.0.1.jar' # Путь к директории с .jar или .war файлом для деплоя
           wait_for_deployment: true # Дожидаться завершения деплоя
           wait_for_environment_recovery: true # Дожидаться восстановления среды после деплоя
+
