@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master # здесь можно указать имя вашей основной ветки, например, master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
@@ -31,7 +34,7 @@ jobs:
           application_name: 'test-action' # Замените на имя вашего приложения в Elastic Beanstalk
           environment_name: 'test-action-env' # Замените на имя вашей среды в Elastic Beanstalk
           version_label: 'v${{ github.sha }}' # Используйте хеш последнего коммита в качестве метки версии
-          deployment_package: 'practic-0.0.1.jar' # Путь к директории с .jar или .war файлом для деплоя
+          deployment_package: 'practic/target/practic-0.0.1.jar' # Путь к директории с .jar или .war файлом для деплоя
           wait_for_deployment: true # Дожидаться завершения деплоя
           wait_for_environment_recovery: true # Дожидаться восстановления среды после деплоя
 
