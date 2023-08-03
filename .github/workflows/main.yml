@@ -35,3 +35,4 @@ jobs:
           wait_for_deployment: true # Дожидаться завершения деплоя
           wait_for_environment_recovery: true # Дожидаться восстановления среды после деплоя
 
+
